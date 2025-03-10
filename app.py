@@ -60,7 +60,7 @@ perguntas = [
             "📱 Redes sociais (Instagram, TikTok, etc)"
         ]
     },
-        {
+    {
         "pergunta": "Qual a área que te identificas mais?",
         "opcoes": [
             "💾 Audiovisuais e comunicação",
@@ -70,6 +70,62 @@ perguntas = [
         ]
     }
 ]
+
+# ------------------------------
+# ESTILO CSS GLOBAL
+# ------------------------------
+
+st.markdown(
+    """
+    <style>
+    body {
+        background-color: #2E8B57;
+    }
+    .stApp {
+        background-color: #2E8B57;
+    }
+    .main-button .stButton button {
+        background-color: #ff7f50;
+        color: white;
+        font-size: 1.5em;
+        font-weight: bold;
+        padding: 1em 3em;
+        border-radius: 10px;
+        border: none;
+        box-shadow: 0px 6px 8px rgba(0,0,0,0.3);
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .main-button .stButton button:hover {
+        background-color: #ff9068;
+        transform: scale(1.05);
+    }
+    .admin-button .stButton button {
+        background-color: transparent;
+        color: #aaa;
+        font-size: 0.8em;
+        text-decoration: underline;
+        border: none;
+    }
+    .admin-button .stButton button:hover {
+        color: #888;
+    }
+    .option-button .stButton button {
+        width: 100%;
+        background-color: #f0f0f0;
+        color: #333;
+        font-size: 1.2em;
+        padding: 1em;
+        border-radius: 8px;
+        margin: 10px 0;
+        transition: background-color 0.3s ease;
+    }
+    .option-button .stButton button:hover {
+        background-color: #e0e0e0;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 # ------------------------------
 # PÁGINAS
@@ -88,53 +144,6 @@ if st.session_state.page == "inicio":
             <img src="https://ismt.pt/ismt/img/logo-ismt.png" alt="Boas-vindas" style="max-width:50%; margin-top:20px;">
             <br><br>
         </div>
-        """,
-        unsafe_allow_html=True
-    )
-
-    # Estilo CSS para botões
-    st.markdown(
-        """
-        <style>
-        .main-button .stButton button {
-            background-color: #ff7f50;
-            color: white;
-            font-size: 1.5em;
-            font-weight: bold;
-            padding: 1em 3em;
-            border-radius: 10px;
-            border: none;
-            box-shadow: 0px 6px 8px rgba(0,0,0,0.3);
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-        .main-button .stButton button:hover {
-            background-color: #ff9068;
-            transform: scale(1.05);
-        }
-        .admin-button .stButton button {
-            background-color: transparent;
-            color: #aaa;
-            font-size: 0.8em;
-            text-decoration: underline;
-            border: none;
-        }
-        .admin-button .stButton button:hover {
-            color: #888;
-        }
-        .option-button .stButton button {
-            width: 100%;
-            background-color: #f0f0f0;
-            color: #333;
-            font-size: 1.2em;
-            padding: 1em;
-            border-radius: 8px;
-            margin: 10px 0;
-            transition: background-color 0.3s ease;
-        }
-        .option-button .stButton button:hover {
-            background-color: #e0e0e0;
-        }
-        </style>
         """,
         unsafe_allow_html=True
     )
@@ -197,7 +206,7 @@ elif st.session_state.page == "jogo":
 elif st.session_state.page == "resultado":
     st.markdown(
         """
-        <div style="text-align:center; padding:30px; background-color:#f9f9f9; border-radius:10px;">
+        <div style="text-align:center; padding:30px; background-color:#2E8B57; border-radius:10px; color:white;">
             <h1>🎉 Parabéns, terminaste o jogo! 🎉</h1>
             <p style="font-size:1.2em;">
                 Obrigado por mostrares quem és! Deixa o teu nome e e-mail para ficares
