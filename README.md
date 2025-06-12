@@ -21,21 +21,15 @@ Running Locally
 Clone the repository:
 
 bash
-Copiar
-Editar
 git clone https://github.com/your-username/university-fair-game.git
 cd university-fair-game
 Install the requirements:
 
 bash
-Copiar
-Editar
 pip install -r requirements.txt
 Start the Streamlit app:
 
 bash
-Copiar
-Editar
 streamlit run app.py
 Open the link provided in your terminal to access the game in your browser.
 
